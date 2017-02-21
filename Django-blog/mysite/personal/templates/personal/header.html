@@ -11,13 +11,21 @@
     <title>empty flow</title>
 		{% load staticfiles %}
     <!-- Bootstrap core CSS -->
+    <script src="{% static 'jquery/jquery-3.1.1.min.js' %}"></script>
+    <script>
+      $(document).ready(function(){
+        $('.text-muted').css({color:'blue', fontWeight:'bold'});
+        $('.navbar').fadeOut();
+        $('.text-muted').html("cookies");
+      });
+    </script>
 		<link rel="icon" type="image/png" href="{% static 'img/eficon.png' %}" >
     <link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
     <script type="text/javascript" src="{% static 'personal/js/boostrap.min.js' %}"></script>
 
   </head>
 
-  <body class = "body" style = "background-color:#f6f6f6; padding-top: 70px; padding-bottom: 70px;" >
+  <body class = "body" style = "background-color:#f6f6f6; padding-top: 70px; height: 100%;" >
 
     <nav class="navbar navbar-inverse navbar-fixed-top" style = "background-color:#404040">
       <div class="container">
@@ -49,12 +57,11 @@
 
       <div class="starter-template">
 			</div>
-
     </div><!-- /.container -->
-    <footer class="navbar navbar-default navbar-fixed-bottom" style = "background-color:#CCCCCC">
-      <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
-      </div>
+
+    <hr>
+    <footer>
+      <p class="text-muted" style = "text-align: center;">&copy; empty-flow. All rights reserved. Theme by Bootstrap</p>
     </footer>
 
 
