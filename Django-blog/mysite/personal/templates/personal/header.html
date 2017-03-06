@@ -35,9 +35,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/blog/">Blog</a></li>
-						<!--Game stuff here -->
             <li><a href="/games/">Games</a></li>
             <li><a href="/about/">About</a></li>
             <li><a href="/contact/">Contact</a></li>
@@ -49,7 +48,6 @@
     <div class="container">
 			{% block content %}
 			{% endblock %}
-      <p class="element"></p>
       <div class="starter-template">
 			</div>
     </div><!-- /.container -->
@@ -67,14 +65,50 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script>
       $(document).ready(function(){
-        $('.navbar').on('click', function(){
-          $('.navbar').fadeOut();
-        });
+        //$('.navbar-nav').on('click', 'li', function(){
+          // get click
+        //  $(".navbar-nav li.active").removeClass("active");
+        //  $(this).addClass("active")
+          // have active change
+      //  });
+        //$('nav a[href^="/' + location.pathname.split("/")[1] +'"]').addClass("active");
+        $(".element").css({"font-size": "200%"});
         $(".element").typed({
-          strings: ["First sentence.", "Second sentence."],
+          strings: ["I am <b>A.Wake</b>", "I am <b>Alan Wake</b>"],
           typeSpeed: 0,
           loop: true
         });
+        var $didScroll;
+        var $lastScrollTop = 0;
+        var $delta = 5;
+        var $navbarHeight = $('header').outerHeight();
+
+        $(window).scroll(function(event){
+          $didScroll = true;
+        });
+
+        $setInterval(function(){
+          if($didScroll){
+            $hasScrolled();
+            didScroll = false;
+          }
+        }, 250);
+
+        function $hasScrolled(){
+          var $strt = $(this).scrollTop();
+
+          if(Math.abs($lastScrollTop - $strt) <= $delta) return;
+
+          if($strt > $lastScrollTop && $strt > $navbarHeight){
+            $('header').removelClass('nav-down').addClass('nav-up');
+          }
+          else{
+            if($strt + $(window).height() < $(document).height()){
+              $('header').removeClass('nav-up').addClass('nav-down')
+            }
+          }
+          $lastScrollTop = $strt;
+        }
       });
     </script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
