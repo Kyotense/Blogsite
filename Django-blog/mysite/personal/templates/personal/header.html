@@ -22,7 +22,7 @@
 
   <body class = "body" style = "background-color:#f6f6f6; padding-top: 70px; height: 100%;" >
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" style = "background-color:#404040">
+    <nav class="navbar navbar-inverse navbar-fixed-top nav-down" style = "background-color:#404040">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -73,6 +73,7 @@
       //  });
         //$('nav a[href^="/' + location.pathname.split("/")[1] +'"]').addClass("active");
         $(".element").css({"font-size": "200%"});
+        $(".nav-up").css({"top": "-40px"});
         $(".element").typed({
           strings: ["I am <b>A.Wake</b>", "I am <b>Alan Wake</b>"],
           typeSpeed: 0,
@@ -81,16 +82,16 @@
         var $didScroll;
         var $lastScrollTop = 0;
         var $delta = 5;
-        var $navbarHeight = $('header').outerHeight();
+        var $navbarHeight = $('nav').outerHeight();
 
         $(window).scroll(function(event){
           $didScroll = true;
         });
 
-        $setInterval(function(){
+        setInterval(function(){
           if($didScroll){
             $hasScrolled();
-            didScroll = false;
+            $didScroll = false;
           }
         }, 250);
 
@@ -100,11 +101,11 @@
           if(Math.abs($lastScrollTop - $strt) <= $delta) return;
 
           if($strt > $lastScrollTop && $strt > $navbarHeight){
-            $('header').removelClass('nav-down').addClass('nav-up');
+            $("nav").fadeOut();
           }
           else{
             if($strt + $(window).height() < $(document).height()){
-              $('header').removeClass('nav-up').addClass('nav-down')
+              $('nav').fadeIn();
             }
           }
           $lastScrollTop = $strt;
