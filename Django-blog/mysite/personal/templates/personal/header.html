@@ -45,7 +45,7 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container" id="page_effect" style="display:none;">
 			{% block content %}
 			{% endblock %}
       <div class="starter-template">
@@ -79,6 +79,7 @@
           typeSpeed: 0,
           loop: true
         });
+        $('#page_effect').fadeIn(2000);
         var $didScroll;
         var $lastScrollTop = 0;
         var $delta = 5;
