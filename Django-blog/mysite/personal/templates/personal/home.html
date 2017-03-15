@@ -1,5 +1,16 @@
 {% extends "personal/header.html" %}
-
+{% include "about/abouts.html" %}
+{% load staticfiles %}
 {% block content %}
-
+<div class = "divs"><img src = "{% static 'img/Test.png' %}">
+</div>
+<hr>
+{% include "about/abouts.html" %}
+<script>
+  $(document).ready(function(){
+    //$('.divs').css({"display":"block"});
+    $('.divs').css({"margin":"auto"});
+    //$('.divs').css({"width":"40%"});
+  });
+</script>
 {% endblock %}
