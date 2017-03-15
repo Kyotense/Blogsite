@@ -1,11 +1,17 @@
 {% extends "personal/header.html" %}
-{% include "about/abouts.html" %}
 {% load staticfiles %}
+{% load inc_register %}
 {% block content %}
 <div class = "divs"><img src = "{% static 'img/Test.png' %}">
 </div>
+<div class="container marketing">
 <hr>
-{% include "about/abouts.html" %}
+{% show_about %}
+<hr>
+{% include "blog/blog_carousel.html" %}
+<hr>
+{% include "games/games_carousel.html" %}
+</div>
 <script>
   $(document).ready(function(){
     //$('.divs').css({"display":"block"});
