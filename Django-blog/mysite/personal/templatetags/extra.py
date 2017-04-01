@@ -12,7 +12,7 @@ def about_us():
 
 @register.inclusion_tag("blog/blog_carousel.html")
 def blog_record():
-    blog_list = Post.objects.all()
+    blog_list = Post.objects.all().order_by("-date")[:3]
     return {'blog_list':blog_list}
 
 @register.inclusion_tag("games/games_carousel.html")

@@ -1,1 +1,37 @@
-Test blog
+{% block content %}
+{% for post in blog_list %}
+  <div class>
+    <div class="col-sm-6 col-md-4" width="300" height="500">
+      <div class="thumbnail">
+        <div class="caption">
+          <h2>{{post.title}}</h2>
+          <h3><small>by {{post.author}} | Published: {{post.date}}</small></h3>
+          <p>...</p>
+          <p><a href="/blog/{{post.id}}" class="btn btn-info" role="button">Read More</a></p>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal{{game.slug}}" tabindex="-1" role="dialog" aaria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">{{post.title}}</h4>
+                </div>
+                <div class="modal-body">
+                  <!-- Body of the text -->
+                  {{post.body}}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endblock content %}

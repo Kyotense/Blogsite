@@ -1,14 +1,20 @@
 
 {% block content %}
 <div class="row">
-  {% for about in object_list %}
+  <h2 class="texts"><bold>About Us</bold></h2>
+  {% for about in about_list %}
   {% load static %}
   <div class="col-lg-4">
-    <img class="img-circle" '{{about.pic.url}}' alt="Generic placeholder image" width="100" height="100">
+    <img class="img-circle" src='{{about.pic.url}}' alt="Generic placeholder image" width="100" height="100">
     <h2>{{about.name}}</h2>
     <p>{{about.description}}</p>
     <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
   </div><!-- /.col-lg-4 -->
   {% endfor %}
 </div><!-- /.row -->
+<script>
+  $(document).ready(function(){
+
+  });
+</script>
 {% endblock %}

@@ -1,16 +1,16 @@
 {% extends "personal/header.html" %}
 {% load staticfiles %}
-{% load inc_register %}
+{% load extra %}
 {% block content %}
 <div class = "divs"><img src = "{% static 'img/Test.png' %}">
 </div>
 <div class="container marketing">
 <hr>
-{% show_about %}
+{% about_us %}
 <hr>
-{% include "blog/blog_carousel.html" %}
+{% blog_record %}
 <hr>
-{% include "games/games_carousel.html" %}
+{% game_record %}
 </div>
 <script>
   $(document).ready(function(){
@@ -19,4 +19,4 @@
     //$('.divs').css({"width":"40%"});
   });
 </script>
-{% endblock %}
+{% endblock content%}
