@@ -2,14 +2,18 @@
 {% load staticfiles %}
 {% load extra %}
 {% block content %}
-<div class = "divs"><img src = "{% static 'img/Test.png' %}">
-</div>
-<div class="container marketing">
-<hr>
+
+
+  <div id = "header-img" class="text-center"><span class="element"></span></div>
+<div class="container" id="page_effect">
 {% about_us %}
-<hr>
+</div>
+<div style="background-color:#404040;">
+<div class="container" id="page_effect">
 {% blog_record %}
-<hr>
+</div>
+</div>
+<div class="container" id="page_effect">
 {% game_record %}
 </div>
 <script>
@@ -18,5 +22,12 @@
     $('.divs').css({"margin":"auto"});
     //$('.divs').css({"width":"40%"});
   });
+  $(".element").typed({
+    strings: ["I am <b>A.Wake</b>", "I am <b>Alan Wake</b>"],
+    typeSpeed: 0,
+    loop: true
+  });
+  $(".start").css({"text-align":"center"});
+  $(".pads").css({"padding-top":"2em","padding-bottom":"1em"});
 </script>
 {% endblock content%}

@@ -1,5 +1,6 @@
 {% extends "personal/header.html" %}
 {% block content %}
+<div id="page_effect" class="container">
 	{% for post in object_list %}
 	{% load static %}
 	<link rel="stylesheet" href="{% static 'custom/blogs.css' %}" type = "text/css"/>
@@ -8,12 +9,12 @@
 			<h3><small>by {{post.author}} | Published: {{post.date}}</small></h3>
 		</h1>
 	</div>
-	<div class = "container">
+	<div class = "container" style="color:white;">
 		{{post.body|safe|linebreaks|slice:":50"}}
 		<br /><br />
 		<a href="/blog/{{post.id}}">Read More</a>
 	</div>
-	<div class = "well well-sm"> <b>Categories:</b>
+	<div class = "well well-sm" style="background-color:#404040;"> <b style="color:white;">Categories:</b>
 		{% for tag in post.tags.all %}<a href="{% url 'tagged' tag.slug %}">{{ tag }} </a>{% endfor %}
 	</div>
 	{% endfor %}
@@ -40,4 +41,5 @@
 			{% endif %}
 		</ul>
 	{% endif %}
+	</div>
 {% endblock %}

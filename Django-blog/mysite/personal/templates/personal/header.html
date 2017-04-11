@@ -20,9 +20,9 @@
 
   </head>
 
-  <body class = "body" style = "background-color:#f6f6f6; padding-top: 70px; height: 100%;" >
-
-    <nav class="navbar navbar-inverse navbar-fixed-top nav-down" style = "background-color:#404040">
+  <body class = "body" style = "background-color:#121212; padding-top: 50px; height: 100%;" >
+    <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top nav-down" style = "background-color:black;">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -44,17 +44,13 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-    <div class="container" id="page_effect" style="display:none;">
+  </header>
 			{% block content %}
 			{% endblock %}
-      <div class="starter-template">
-			</div>
-    </div><!-- /.container -->
-
+    <!-- /.container -->
     <hr>
     <footer>
-      <p class="text-muted" style = "text-align: center;">&copy; empty-flow. All rights reserved. Theme by Bootstrap</p>
+      <p class="text-muted" style = "text-align: center;">&copy; empty-flow. All rights reserved.</p>
     </footer>
 
 
@@ -65,22 +61,10 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script>
       $(document).ready(function(){
-        //$('.navbar-nav').on('click', 'li', function(){
-          // get click
-        //  $(".navbar-nav li.active").removeClass("active");
-        //  $(this).addClass("active")
-          // have active change
-      //  });
-        //$('nav a[href^="/' + location.pathname.split("/")[1] +'"]').addClass("active");
-        $(".element").css({"font-size": "200%"});
         $(".nav-up").css({"top": "-40px"});
         $(".texts").css({"text-align":"center"});
-        $(".element").typed({
-          strings: ["I am <b>A.Wake</b>", "I am <b>Alan Wake</b>"],
-          typeSpeed: 0,
-          loop: true
-        });
         $('#page_effect').fadeIn(2000);
+        $('#header-img').css({"background-image":"url({% static 'img/Test.png' %})", "width": "100%", "height": "600px", "background-size": "cover", "background-repeat": "no-repeat"});
         var $didScroll;
         var $lastScrollTop = 0;
         var $delta = 5;
