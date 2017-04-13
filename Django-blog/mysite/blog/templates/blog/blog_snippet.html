@@ -1,0 +1,23 @@
+{% block content %}
+<h2 style="text-align:center; color:white;"><b>Latest Updates</b></h2>
+
+  <div class>
+    {% for post in blog_list %}
+    <div class="col-sm-6 col-md-4" width="300" height="500">
+      <div class="thumbnail" style="background-color:black;">
+        <div class="caption">
+          <h2 style="color:white;">{{post.title}}</h2>
+          <h3><small>by {{post.author}} | Published: {{post.date}}</small></h3>
+          <p>...</p>
+          <p><a href="/blog/{{post.id}}" class="btn btn-info" role="button">Read More</a></p>
+
+
+        </div>
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+
+  <p style="text-align:center;"><a href="/blog/" class="btn btn-info" role="button">More Posts</a></p>
+{% endblock content %}

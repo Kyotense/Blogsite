@@ -1,0 +1,10 @@
+{% load staticfiles %}
+#nav_image {
+ display: block;
+ width:140px;
+ height:35px;
+ background-image: url("{% static 'img/ef_logo2.png' %}");
+}
+#nav_image:hover {
+ background-image: url("{% static 'img/ef_logo.png' %}");
+}

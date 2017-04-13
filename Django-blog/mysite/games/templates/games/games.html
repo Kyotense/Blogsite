@@ -1,5 +1,6 @@
 {% extends "personal/header.html" %}
 {% block content %}
+<div class="container" id="page_effect">
   {% for game in object_list %}
     <div class>
       <div class="col-sm-6 col-md-4" width="300" height="500">
@@ -35,4 +36,5 @@
       </div>
     </div>
   {% endfor %}
+</div>
 {% endblock %}
