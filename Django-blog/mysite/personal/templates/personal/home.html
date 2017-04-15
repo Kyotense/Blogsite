@@ -5,7 +5,7 @@
 
 
   <div id = "header-img" class="text-center">
-    <div><span class="element"></span>
+    <div class="pads"><span class="element"></span>
     </div>
     </div>
 <div class="container" id="page_effect">
@@ -21,9 +21,7 @@
 </div>
 <script>
   $(document).ready(function(){
-    //$('.divs').css({"display":"block"});
     $('.divs').css({"margin":"auto"});
-    //$('.divs').css({"width":"40%"});
   });
   $(".element").typed({
     strings: ["Welcome to...", "<b>empty-flow</b>"],
@@ -31,7 +29,7 @@
     loop: true
   });
   $(".start").css({"text-align":"center"});
-  $(".element").css({"color":"white","font-size":"large"});
-  $(".pads").css({"padding-top":"2em","padding-bottom":"1em"});
+  $(".element").css({"color":"white","font-size":"xx-large", });
+  $(".pads").css({"padding-top":"4em","padding-bottom":"4em"});
 </script>
 {% endblock content%}
