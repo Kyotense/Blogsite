@@ -9,7 +9,7 @@
 			<h3><small>by {{post.author}} | Published: {{post.date}}</small></h3>
 		</h1>
 	</div>
-	<div class = "container" style="color:white;">
+	<div class = "blog_pads" style="color:white;">
 		{{post.body|safe|linebreaks|slice:":50"}}
 		<br /><br />
 		<a href="/blog/{{post.id}}">Read More</a>

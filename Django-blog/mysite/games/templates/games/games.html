@@ -1,6 +1,8 @@
-cd {% extends "personal/header.html" %}
+{% extends "personal/header.html" %}
 {% block content %}
 <div class="container" id="page_effect">
+  <p class="paragraph_pads homepage_p">A work in progress....</p>
+  <!--
   {% for game in object_list %}
     <div class>
       <div class="col-sm-6 col-md-4" width="300" height="500">
@@ -10,8 +12,8 @@ cd {% extends "personal/header.html" %}
             <h3 style="color:white;">{{game.title}}</h3>
             <p>...</p>
             <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{game.slug}}">More Details</button></p>
-
-            <!-- Modal -->
+-->
+            <!-- Modal --><!--
             <div class="modal fade" id="myModal{{game.slug}}" tabindex="-1" role="dialog" aaria-labelledby="myModalLabel" style="color:white;">
               <div class="modal-dialog" role="document">
                 <div class="modal-content" style="background-color:black;">
@@ -20,7 +22,8 @@ cd {% extends "personal/header.html" %}
                     <h4 class="modal-title" id="myModalLabel">{{game.title}}</h4>
                   </div>
                   <div class="modal-body">
-                    <!-- Body of the text -->
+                  -->
+                    <!-- Body of the text --><!--
                     {{game.description}}
                   </div>
                   <div class="modal-footer">
@@ -36,5 +39,6 @@ cd {% extends "personal/header.html" %}
       </div>
     </div>
   {% endfor %}
+-->
 </div>
 {% endblock %}

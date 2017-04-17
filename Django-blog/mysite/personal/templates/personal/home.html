@@ -5,14 +5,14 @@
 
 
   <div id = "header-img" class="text-center">
-    <div class="pads"><span class="element"></span>
+    <div class="paragraph_pads"><span class="element"></span>
     </div>
     </div>
-<div class="container" id="page_effect">
+<div class="container div_pads" id="page_effect">
 {% about_us %}
 </div>
 <div style="background-color:#404040;">
-<div class="container" id="page_effect">
+<div class="container div_pads" id="page_effect">
 {% blog_record %}
 </div>
 </div>
@@ -23,13 +23,6 @@
   $(document).ready(function(){
     $('.divs').css({"margin":"auto"});
   });
-  $(".element").typed({
-    strings: ["Welcome to...", "<b>empty-flow</b>"],
-    typeSpeed: 0,
-    loop: true
-  });
-  $(".start").css({"text-align":"center"});
-  $(".element").css({"color":"white","font-size":"xx-large", });
-  $(".pads").css({"padding-top":"4em","padding-bottom":"4em"});
+  
 </script>
 {% endblock content%}

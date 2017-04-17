@@ -1,39 +1,5 @@
 {% block content %}
-<h2 class="texts" style="color:white;"><b>Games</b></h2>
-  {% for game in game_list %}
-    <div class>
-      <div class="col-sm-6 col-md-4" width="300" height="500">
-        <div class="thumbnail" style="background-color:black;">
-          <img src="{{game.logo.url}}" alt="logo">
-          <div class="caption">
-            <h3 style="color:white;">{{game.title}}</h3>
-            <p>...</p>
-            <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{game.slug}}">More Details</button></p>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal{{game.slug}}" tabindex="-1" role="dialog" aaria-labelledby="myModalLabel" style="color:white;">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content" style="background-color:black;">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">{{game.title}}</h4>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Body of the text -->
-                    {{game.description}}
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-  {% endfor %}
+<h2 class="texts" style="color:white;"><b>GAMES</b></h2>
+  <p class="paragraph_pads homepage_p">At the moment we are working on our first game. Details to be added soon.</p>
   <p style="text-align:center;"><a href="/games/" class="btn btn-primary" role="button">More Games</a></p>
 {% endblock %}
