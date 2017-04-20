@@ -1,4 +1,8 @@
 
+p {
+  color:#808080;
+}
+
 #nav_image {
  width:140px;
  height:40px;
@@ -9,4 +13,37 @@
 }
 #nav_image:hover {
  background-image: url("../img/ef_logo2.png");
+}
+
+.nav-up {
+  top:-40px
+}
+
+.text-center {
+  text-align:center;
+  color:white;
+}
+
+.container {
+  padding-left:75px;
+  padding-right:75px;
+}
+.blog_pads {
+  padding-right:15px;
+  padding-left:15px;
+}
+
+.typewriter {
+  color:white;
+  font-size:xx-large;
+}
+
+.paragraph-pads {
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+}
+
+.homepage_paragraph{
+  font-size:16px;
+  text-align:center;
 }
