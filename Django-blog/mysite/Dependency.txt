@@ -1,5 +1,0 @@
-Django-Taggit:
-pip install django-taggit
-
-PIL:
-pip install Pillow
