@@ -19,8 +19,8 @@
 	5) The website has a two dependencies. Use the commands below to install the dependencies:
 		a) pip install django-taggit
 		b) pip install Pillow
-	6) Traverse in the terminal to Blogsite/Django-blog/mysite directory. 
-	7) Run the website by using the 'python manage.py runserver'. Afterwards, the website should be running the website. Go to the url: 'http://127.0.0.1:8000/'.
+	6) Traverse in the terminal to Blogsite/Django-blog/mysite directory where manage.py is located. 
+	7) Run the website by using the 'python manage.py runserver'. Afterwards, the website should be running. Go to the url: 'http://127.0.0.1:8000/'.
 
 
 
